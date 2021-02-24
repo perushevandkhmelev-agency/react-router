@@ -35,8 +35,8 @@
     "history": "^2.1.2",
     "hoist-non-react-statics": "^1.2.0",
     "invariant": "^2.2.1",
-    "warning": "^3.0.0",
-    "loose-envify": "^1.2.0"
+    "loose-envify": "^1.2.0",
+    "warning": "^3.0.0"
   },
   "peerDependencies": {
     "react": "^0.14.0 || ^15.0.0"
@@ -74,6 +74,7 @@
     "karma-webpack": "^1.7.0",
     "mocha": "^2.5.3",
     "pretty-bytes": "^3.0.1",
+    "prop-types": "^15.7.2",
     "qs": "^6.2.1",
     "react": "^15.3.0",
     "react-addons-css-transition-group": "^15.3.0",

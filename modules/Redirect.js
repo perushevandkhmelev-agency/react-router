@@ -1,10 +1,11 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import invariant from 'invariant'
 import { createRouteFromReactElement } from './RouteUtils'
 import { formatPattern } from './PatternUtils'
 import { falsy } from './InternalPropTypes'
 
-const { string, object } = React.PropTypes
+const { string, object } = PropTypes
 
 /**
  * A <Redirect> is used to declare another URL path a client should
@@ -16,7 +17,7 @@ const { string, object } = React.PropTypes
 const Redirect = React.createClass({
 
   statics: {
-    
+
     createRouteFromReactElement(element) {
       const route = createRouteFromReactElement(element)
 
