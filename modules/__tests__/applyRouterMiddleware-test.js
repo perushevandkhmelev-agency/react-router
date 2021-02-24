@@ -7,12 +7,13 @@ import Route from '../Route'
 import createMemoryHistory from '../createMemoryHistory'
 import applyMiddleware from '../applyRouterMiddleware'
 import shouldWarn from './shouldWarn'
+import createReactClass from 'create-react-class'
 
 const FOO_ROOT_CONTAINER_TEXT = 'FOO ROOT CONTAINER'
 const BAR_ROOT_CONTAINER_TEXT = 'BAR ROOT CONTAINER'
 const BAZ_CONTAINER_TEXT = 'BAZ INJECTED'
 
-const FooRootContainer = React.createClass({
+const FooRootContainer = createReactClass({
   propTypes: { children: PropTypes.node.isRequired },
   childContextTypes: { foo: PropTypes.string },
   getChildContext() { return { foo: FOO_ROOT_CONTAINER_TEXT } },
@@ -21,7 +22,7 @@ const FooRootContainer = React.createClass({
   }
 })
 
-const FooContainer = React.createClass({
+const FooContainer = createReactClass({
   propTypes: { children: PropTypes.node.isRequired },
   contextTypes: { foo: PropTypes.string.isRequired },
   render() {
@@ -40,7 +41,7 @@ const useFoo = () => ({
   )
 })
 
-const BarRootContainer = React.createClass({
+const BarRootContainer = createReactClass({
   propTypes: { children: PropTypes.node.isRequired },
   childContextTypes: { bar: PropTypes.string },
   getChildContext() { return { bar: BAR_ROOT_CONTAINER_TEXT } },
@@ -49,7 +50,7 @@ const BarRootContainer = React.createClass({
   }
 })
 
-const BarContainer = React.createClass({
+const BarContainer = createReactClass({
   propTypes: { children: PropTypes.node.isRequired },
   contextTypes: { bar: PropTypes.string.isRequired },
   render() {

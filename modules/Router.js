@@ -10,6 +10,7 @@ import RouterContext from './RouterContext'
 import { createRoutes } from './RouteUtils'
 import { createRouterObject, createRoutingHistory } from './RouterUtils'
 import warning from './routerWarning'
+import createReactClass from 'create-react-class'
 
 function isDeprecatedHistory(history) {
   return !history || !history.__v2_compatible__
@@ -28,7 +29,7 @@ const { func, object } = PropTypes
  * a router that renders a <RouterContext> with all the props
  * it needs each time the URL changes.
  */
-const Router = React.createClass({
+const Router = createReactClass({
 
   propTypes: {
     history: object,

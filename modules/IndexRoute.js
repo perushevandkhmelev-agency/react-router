@@ -4,6 +4,7 @@ import warning from './routerWarning'
 import invariant from 'invariant'
 import { createRouteFromReactElement } from './RouteUtils'
 import { component, components, falsy } from './InternalPropTypes'
+import createReactClass from 'create-react-class'
 
 const { func } = PropTypes
 
@@ -11,7 +12,7 @@ const { func } = PropTypes
  * An <IndexRoute> is used to specify its parent's <Route indexRoute> in
  * a JSX route config.
  */
-const IndexRoute = React.createClass({
+const IndexRoute = createReactClass({
 
   statics: {
 

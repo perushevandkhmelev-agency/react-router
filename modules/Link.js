@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import warning from './routerWarning'
 import invariant from 'invariant'
 import { routerShape } from './PropTypes'
+import createReactClass from 'create-react-class'
 
 const { bool, object, string, func, oneOfType } = PropTypes
 
@@ -49,7 +50,7 @@ function createLocationDescriptor(to, { query, hash, state }) {
  *
  *   <Link ... query={{ show: true }} state={{ the: 'state' }} />
  */
-const Link = React.createClass({
+const Link = createReactClass({
 
   contextTypes: {
     router: routerShape

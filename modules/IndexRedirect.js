@@ -4,13 +4,14 @@ import warning from './routerWarning'
 import invariant from 'invariant'
 import Redirect from './Redirect'
 import { falsy } from './InternalPropTypes'
+import createReactClass from 'create-react-class'
 
 const { string, object } = PropTypes
 
 /**
  * An <IndexRedirect> is used to redirect from an indexRoute.
  */
-const IndexRedirect = React.createClass({
+const IndexRedirect = createReactClass({
 
   statics: {
 
